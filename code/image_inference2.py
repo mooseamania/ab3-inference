@@ -154,13 +154,13 @@ def infer(bucket,key):
     else:
         run_defect(cls_mask, newpath)
         #second_infer(newpath)
-        os.remove('/tmp/mask.png')
-        os.remove('/tmp/predictedimage.png')
-        os.remove('/tmp/pic.png')
-        os.remove('/tmp/transparent_mask.png')
-        os.remove('/tmp/highlight_mask.png')
+        #os.remove('/tmp/mask.png')
+        #os.remove('/tmp/predictedimage.png')
+        #os.remove('/tmp/pic.png')
+        #os.remove('/tmp/transparent_mask.png')
+        #os.remove('/tmp/highlight_mask.png')
         #os.remove('/tmp/newpath.jpg')
-        os.remove('/tmp/n.txt')
+        #os.remove('/tmp/n.txt')
 
 
 def run_defect(cls_mask, newpath):
@@ -188,7 +188,7 @@ def run_defect(cls_mask, newpath):
     s3_predicted_location = '{}/{}-pixel_map.png'.format(output_prefix, unique_id)
     s3.upload_file('/tmp/highlight_mask.png', output_bucket, s3_predicted_location)
     print("invoking 2nd inference")
-    second_infer(newpath)
+    #second_infer(newpath)
 
 def run_acceptable():
     output_prefix = 'acceptable'

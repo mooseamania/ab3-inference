@@ -9,8 +9,8 @@ RUN pip3 install Pillow
 RUN pip3 install matplotlib
 RUN pip3 install pandas
 
-COPY code/image_inference.py /var/task
+COPY code/image_inference2.py /var/task
 
-CMD [ "image_inference.handler" ]
+CMD [ "image_inference2.handler" ]
 
 
